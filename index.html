@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+  <title>Weather App!!!!!</title>
+
+  <!--RESET.CSS-->
+  <link rel='stylesheet' type='text/css' href='styles/reset.css'>
+
+  <!--External CSS-->
+  <link rel='stylesheet' type='text/css' href='styles/style.css'>
+
+  <!--Font Awesome-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+
+  <section class="centerSearch flex center">
+
+    <form onsubmit = "zipCheck" class="flex">
+        <div class="flex center column">
+          <input type="number" placeholder="Enter Zip Code" id="zipInput"/>
+
+          <h1 class="message none">Valid 5-digit zip code needed!</h1>
+        </div>
+
+        <button id="searchBtn">
+          <i class="fa fa-search"></i> SUBMIT
+        </button>
+
+    </form>
+
+  </section>
+
+  <section class="none weatherInfo">
+    <div class="flex center column" id="weatherContent">
+      <div class="current flex column">
+        <div class="locDiv"><h3 id="loc"></h3></div>
+        <div class="currTempDiv"><h1 id="currTemp"></h1></div>
+        <div class="descriptDiv"><h2 id="descript"></h2></div>
+      </div>
+
+      <div class="temp flex">
+        <div class="low flex center column">
+          <!--
+          Should really be named Low
+          <h4 id="lowHeading">Low</h4> -->
+          <h4 id="lowHeading">Min</h4>
+          <h5 id="minTemp"></h5>
+        </div>
+
+        <div class="high flex center column">
+          <!--
+          Should really be named High
+          <h4 id="highHeading">High</h4> -->
+          <h4 id="highHeading">Max</h4>
+          <h5 id="maxTemp"></h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="none extraInfo flex column">
+    <h4 class="extra" id="long"></h4>
+    <h4 class="extra" id="lat"></h4>
+    <h4 class="extra" id="humid"></h4>
+    <h4 class="extra" id="wind"></h4>
+    <h4 class="extra" id="sunrise"></h4>
+    <h4 class="extra" id="sunset"></h4>
+  </section>
+
+</main>
+
+  <script src='js/main.js'></script>
+</body>
+</html>
