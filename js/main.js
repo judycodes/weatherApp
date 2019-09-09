@@ -11,8 +11,8 @@ function apiCall(e) {
 
 
   const zipValue = document.querySelector('#zipInput').value;
-  const appId = process.env.API_Id;
-  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipValue}&units=imperial&appid=${appId}`)
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipValue}&units=imperial&appid=a083f2cdebaa79e8a089546912abcedb`)
 
   .then((res) => {
     return res.json();
